@@ -1,0 +1,46 @@
+<div class="container">
+    <div class="row">
+       <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+           <a href="#" class="btn btn-success">Novo</a>
+           <table class="table table-striped table-hover">
+             <style type="text/css">
+              tbody{
+                padding: 100px;
+                background: rgb(4, 96, 216);
+              }
+
+              .balao{
+                background:#fff;
+                padding: 10px;
+                position: relative;
+                width:300px;
+
+               }
+
+             </style>
+             <div class="balao"><p>Todos os prazos maximos de análise são de 0 a 7 dias</p></div>
+               <thead>
+                   <tr>
+                     <th>PROCEDIMENTO</th>
+                     <th>codigo</th>
+                     <th>Nome</th>
+                     <th>Email</th>
+                     <th>CPF</th>
+                     <th>Deletar</th>
+                   </tr>
+               </thead>
+               <link href= "css/bootstrap.min" rel="stylesheet" type="text/css"/>
+
+               <tbody>
+                  <tr *ngFor = "let c of Paciente">
+              <td>{{c.codigo}}</td>
+              <td>{{c.Nome}}</td>
+              <td>{{c.email}}</td>
+              <td>{{c.CPF}}</td>
+                   <td><button class="btn btn-danger">Deletar</button></td>
+                 </tr>
+               </tbody>
+           </table>
+       </div>
+    </div>
+ </div>
